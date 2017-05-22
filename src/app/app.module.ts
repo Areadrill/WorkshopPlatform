@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { WorkshopService } from './workshops.service';
+import { WorkshopDetailComponent } from './workshop-detail/workshop-detail.component';
 
 const routes: Routes = [
   
@@ -14,7 +15,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WorkshopDetailComponent
   ],
   imports: [
     BrowserModule,

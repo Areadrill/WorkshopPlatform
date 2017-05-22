@@ -10,11 +10,17 @@ import { Workshop } from './Workshop';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
   public constructor(private wss: WorkshopService){}
 
   private workshopList: Workshop[];
+  private activeWorkshop: Workshop;
 
-  public ngOnInit(){
-    console.log(this.wss.getWorkshopList());
+  private selectWorkshop(workshop: Workshop) {
+    this.activeWorkshop = workshop;
+  }
+
+  public async ngOnInit(){
+    this.workshopList = await this.wss.getWorkshopList();
   }
 }

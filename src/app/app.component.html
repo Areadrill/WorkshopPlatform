@@ -1,3 +1,7 @@
-<h1>
-  {{title}}
-</h1>
+<ul>
+  <li *ngFor="let workshop of workshopList" (click)="selectWorkshop(workshop)">
+    {{workshop.title}}
+  </li>
+</ul>
+<app-workshop-detail *ngIf="activeWorkshop" [workshop]="activeWorkshop">
+</app-workshop-detail>
