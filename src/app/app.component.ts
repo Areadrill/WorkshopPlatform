@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 import { WorkshopService } from './workshops.service';
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit{
 
   public constructor(private wss: WorkshopService){}
 
-  private workshopList: Workshop[];
+  private workshopList: Observable<Workshop[]>;
   private activeWorkshop: Workshop;
 
   private selectWorkshop(workshop: Workshop) {
@@ -21,6 +22,6 @@ export class AppComponent implements OnInit{
   }
 
   public async ngOnInit(){
-    this.workshopList = await this.wss.getWorkshopList();
+    this.workshopList = await this.wss.simulateServerGetWorkshops();
   }
 }

@@ -12,6 +12,10 @@ export class Workshop{
         this._description = description;
     }
 
+    public toJSON() {
+        return JSON.stringify({title: this._title, date: this._date, cost: this._cost, description: this._description});
+    }
+
     get title(): string{
         return this._title;
     }
@@ -27,4 +31,5 @@ export class Workshop{
     get description(): string{
         return this._description;
     }
+    
 }

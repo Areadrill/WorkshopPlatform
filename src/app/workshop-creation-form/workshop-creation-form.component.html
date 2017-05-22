@@ -1,0 +1,9 @@
+<form (ngSubmit)="createWorkshop(workshop)" #workshopForm="ngForm">
+  <label>Title</label>
+  <input name="title" type="text" [(ngModel)]="title">
+  <label>Description</label>
+  <input name="description" type="text" [(ngModel)]="description">
+  <label>Date</label>
+  <input name="date" type="date" [(ngModel)]="date">
+  <input type="submit">
+</form>

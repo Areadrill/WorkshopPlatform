@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 import { WorkshopService } from './workshops.service';
 import { WorkshopDetailComponent } from './workshop-detail/workshop-detail.component';
+import { WorkshopCreationFormComponent } from './workshop-creation-form/workshop-creation-form.component';
 
 const routes: Routes = [
   
@@ -16,7 +17,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    WorkshopDetailComponent
+    WorkshopDetailComponent,
+    WorkshopCreationFormComponent
   ],
   imports: [
     BrowserModule,

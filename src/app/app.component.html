@@ -1,7 +1,8 @@
 <ul>
-  <li *ngFor="let workshop of workshopList" (click)="selectWorkshop(workshop)">
+  <li *ngFor="let workshop of workshopList | async" (click)="selectWorkshop(workshop)">
     {{workshop.title}}
   </li>
 </ul>
-<app-workshop-detail *ngIf="activeWorkshop" [workshop]="activeWorkshop">
-</app-workshop-detail>
+<app-workshop-detail *ngIf="activeWorkshop" [workshop]="activeWorkshop"></app-workshop-detail>
+<button>Create workshop</button>
+<app-workshop-creation-form></app-workshop-creation-form>
