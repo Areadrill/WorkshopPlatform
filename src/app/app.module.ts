@@ -11,7 +11,7 @@ import { WorkshopDetailComponent } from './workshop-detail/workshop-detail.compo
 import { WorkshopCreationFormComponent } from './workshop-creation-form/workshop-creation-form.component';
 
 const routes: Routes = [
-  
+  {path: "create-form", component: WorkshopCreationFormComponent}
 ];
 
 @NgModule({
@@ -24,7 +24,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule
+    RouterModule.forRoot(routes)
   ],
   providers: [WorkshopService],
   bootstrap: [AppComponent]

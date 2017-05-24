@@ -1,8 +1,9 @@
+<h1>Fantastic Angular Workshop Platform (TM)</h1>
+<router-outlet></router-outlet>
 <ul>
   <li *ngFor="let workshop of workshopList | async" (click)="selectWorkshop(workshop)">
     {{workshop.title}}
   </li>
 </ul>
 <app-workshop-detail *ngIf="activeWorkshop" [workshop]="activeWorkshop"></app-workshop-detail>
-<button>Create workshop</button>
-<app-workshop-creation-form></app-workshop-creation-form>
+<a routerLink="/create-form" routerLinkActive="active">Create new Workshop</a>
